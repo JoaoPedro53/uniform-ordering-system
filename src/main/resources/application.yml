@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: system-order-uniform
+
+  threads:
+    virtual:
+      enabled: true
+  web:
+    error:
+      include-stacktrace: on_param
+
+server:
+  servlet:
+    context-path: /
