@@ -24,7 +24,6 @@ public class OrderPostRequest {
     private Integer quantity;
     private School school;
     private LocalDate deliveryDate;
-    private LocalDate purchaseDate;
     private String details;
     private StatusPayment statusPayment;
     private Double moneyGiven;

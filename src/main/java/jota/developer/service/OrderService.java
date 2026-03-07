@@ -40,7 +40,6 @@ public class OrderService {
     public void update(Order orderToUpdate) {
         var order = findByIdOrThrowNotFound(orderToUpdate.getOrderId());
         orderToUpdate.setPurchaseDate(order.getPurchaseDate());
-        orderToUpdate.setDeliveryDate(order.getDeliveryDate());
         repository.update(orderToUpdate);
     }
 }

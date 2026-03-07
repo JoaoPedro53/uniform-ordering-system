@@ -9,6 +9,7 @@ import jota.developer.enums.UniformType;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Setter
 @Getter
@@ -24,7 +25,7 @@ public class OrderPostResponse {
     private Integer quantity;
     private School school;
     private LocalDate deliveryDate;
-    private LocalDate purchaseDate;
+    private LocalDateTime purchaseDate;
     private String details;
     private StatusPayment statusPayment;
     private Double moneyGiven;
