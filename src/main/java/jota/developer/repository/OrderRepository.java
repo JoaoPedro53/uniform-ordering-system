@@ -1,15 +1,16 @@
 package jota.developer.repository;
 
 import jota.developer.domain.Order;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-
+@Repository
 public class OrderRepository {
-    private final static List<Order> ORDERS = new ArrayList<>();
+    private static final List<Order> ORDERS = new ArrayList<>();
 
     public List<Order> findAll() {
         return ORDERS;
@@ -27,7 +28,7 @@ public class OrderRepository {
         return ORDERS.stream().filter(order -> order.getDeliveryDate().equals(date)).toList();
     }
 
-    public Order save(Order order){
+    public Order save(Order order) {
         ORDERS.add(order);
         return order;
     }
