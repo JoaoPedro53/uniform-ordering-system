@@ -11,11 +11,15 @@ O UOS está em desenvolvimento e tem como objetivo ser um sistema simples para g
 <h3 align="center">Stack</h3>
 
 <p align="center">
-Java • Spring Boot
+Java • Spring Boot Docker
 </p>
 
 <h3 align="center">Patterns</h3>
 
 <p align="center">
 MVC (Model-View-Controller)<br>DTO (Data Transfer Object)
+</p>
+
+<p>
+ Baixe a <a href="https://hub.docker.com/repository/docker/joaopedro53/uos-system/general" target="_blank">imagem</a> da aplicação
 </p>
