@@ -17,7 +17,7 @@ Java • Spring Boot • Docker
 <h3 align="center">Patterns</h3>
 
 <p align="center">
-MVC (Model-View-Controller)<br>DTO (Data Transfer Object)
+MVC<br>DTO
 </p>
 
 Baixe a [imagem](https://hub.docker.com/repository/docker/joaopedro53/uos-system/general) da aplicação no Docker Hub -> Use a 0.0.2 <br>
