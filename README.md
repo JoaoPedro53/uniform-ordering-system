@@ -8,14 +8,14 @@
 O UOS está em desenvolvimento e tem como objetivo ser um sistema simples para gestão de encomendas de uniformes escolares.
 </p>
 
-<h3 align="center">Tecnologias</h3>
+<h3 align="center">Stack</h3>
 
 <p align="center">
 Java • Spring Boot
 </p>
 
-<h3 align="center">Padrões</h3>
+<h3 align="center">Patterns</h3>
 
 <p align="center">
-MVC (Model-View-Controller)
+MVC (Model-View-Controller)<br>DTO (Data Transfer Object)
 </p>
