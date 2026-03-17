@@ -10,31 +10,31 @@ import java.util.Optional;
 
 @Repository
 public class OrderRepository {
-    private static final List<Order> ORDERS = new ArrayList<>();
+    private OrderRepositoryData repositoryData;
 
     public List<Order> findAll() {
-        return ORDERS;
+        return repositoryData.getORDERS();
     }
 
     public Optional<Order> findById(Long id) {
-        return ORDERS.stream().filter(order -> order.getOrderId().equals(id)).findFirst();
+        return repositoryData.getORDERS().stream().filter(order -> order.getOrderId().equals(id)).findFirst();
     }
 
     public List<Order> findByName(String name) {
-        return ORDERS.stream().filter(order -> order.getClient().getName().equalsIgnoreCase(name)).toList();
+        return repositoryData.getORDERS().stream().filter(order -> order.getClient().getName().equalsIgnoreCase(name)).toList();
     }
 
     public List<Order> searchByDate(LocalDate date) {
-        return ORDERS.stream().filter(order -> order.getDeliveryDate().equals(date)).toList();
+        return repositoryData.getORDERS().stream().filter(order -> order.getDeliveryDate().equals(date)).toList();
     }
 
     public Order save(Order order) {
-        ORDERS.add(order);
+        repositoryData.getORDERS().add(order);
         return order;
     }
 
     public void delete(Order order) {
-        ORDERS.remove(order);
+        repositoryData.getORDERS().remove(order);
     }
 
     public void update(Order order) {

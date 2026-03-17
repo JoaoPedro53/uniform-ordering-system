@@ -1,5 +1,7 @@
 package jota.developer.domain;
 
+import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 @Getter
@@ -8,5 +10,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class School {
+    @Schema(hidden = true)
     private String name;
 }
