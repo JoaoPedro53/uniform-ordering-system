@@ -49,7 +49,7 @@ class OrderRepositoryTest {
         BDDMockito.when(repositoryData.getORDERS()).thenReturn(ordersList);
 
         var orders = repository.findAll();
-        Assertions.assertThat(orders).isNotNull().hasSameElementsAs(ordersList);
+        Assertions.assertThat(orders).hasSameElementsAs(ordersList);
     }
 
     @Test
@@ -59,7 +59,7 @@ class OrderRepositoryTest {
         BDDMockito.when(repositoryData.getORDERS()).thenReturn(ordersList);
 
         var orders = repository.findByName(null);
-        Assertions.assertThat(orders).isNotNull().isEmpty();
+        Assertions.assertThat(orders).isEmpty();
     }
 
     @Test
@@ -70,7 +70,7 @@ class OrderRepositoryTest {
 
         var orderExpected = ordersList.getFirst();
         var order = repository.findById(orderExpected.getOrderId());
-        Assertions.assertThat(order).isNotNull().contains(orderExpected);
+        Assertions.assertThat(order).contains(orderExpected);
     }
 
     @Test
@@ -82,7 +82,7 @@ class OrderRepositoryTest {
         var orderExpectedForDate = ordersList.getFirst();
         var ordersByDate = repository.searchByDate(LocalDate.of(2026, 03, 20));
 
-        Assertions.assertThat(ordersByDate).isNotNull().contains(orderExpectedForDate);
+        Assertions.assertThat(ordersByDate).contains(orderExpectedForDate);
     }
 
     @Test
@@ -96,7 +96,7 @@ class OrderRepositoryTest {
                 .details("").quantity(1).school(new School("Livramento")).uniformType(UniformType.SHIRT)
                 .uniformSizeUp(UniformSizeUp.M).client(new Client("João", "82 99760-2347")).build();
         repository.save(order);
-        Assertions.assertThat(this.ordersList).isNotNull().contains(order);
+        Assertions.assertThat(this.ordersList).contains(order);
     }
 
     @Test
